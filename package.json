@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/uile-alt/roto/issues"
   },
-  "homepage": "https://github.com/uile-alt/roto#readme"
+  "homepage": "https://github.com/uile-alt/roto#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
