@@ -7,8 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        *{margin: 0; padding: 0; box-sizing: border-box;}
-        :root{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
             --button-height: 32px;
             --font-size: 16px;
             --button-bg: white;
@@ -18,20 +23,35 @@
             --border-color-hover: #666;
             --color: #333;
         }
-        #app{
+
+        #app {
             margin: 20px;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
         }
     </style>
-
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <r-button></r-button>
+    <r-button icon="settings">
+        按钮
+    </r-button>
+    <r-button icon="settings" icon-position="left">
+        按钮
+    </r-button>
+    <r-button icon="settings" icon-position="right">
+        按钮
+    </r-button>
 </div>
 <script src="./src/app.js"></script>
-
+<script src="//at.alicdn.com/t/font_2318058_sojk2f3r7r.js"></script>
 </body>
 </html>
