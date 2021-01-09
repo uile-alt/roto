@@ -1,6 +1,7 @@
 <template>
     <button class="r-button" :class="{[`icon-${iconPosition}`] : true}">
         <r-icon class="icon" v-if='icon' :name="icon"></r-icon>
+        <r-icon class="loading" name="loading"></r-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -21,6 +22,13 @@
     }
 </script>
 <style lang="scss">
+    @keyframes spin {
+        0% {transform: rotate(0deg)}
+        100% {transform: rotate(360deg)}
+    }
+    .loading{
+        animation: spin 1s infinite linear ;
+    }
     .r-button {
         display: inline-flex;
         justify-content: center;

@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca932250-2beb-4f73-a8af-5592d88274ad" name="Default Changelist" comment="验证iconPosition的值是否为left或right">
-      <change afterPath="$PROJECT_DIR$/src/components/icon.vue" afterDir="false" />
+    <list default="true" id="ca932250-2beb-4f73-a8af-5592d88274ad" name="Default Changelist" comment="add icon.vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1609763213382" duration="608000" />
       <workItem from="1610106544037" duration="8712000" />
       <workItem from="1610164966780" duration="4177000" />
-      <workItem from="1610171691850" duration="4710000" />
+      <workItem from="1610171691850" duration="5413000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1606576963753</created>
@@ -134,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610176932635</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add icon.vue">
+      <created>1610177833474</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610177833474</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +165,8 @@
     <MESSAGE value=".idea" />
     <MESSAGE value="add icon and iconPosition" />
     <MESSAGE value="验证iconPosition的值是否为left或right" />
-    <option name="LAST_COMMIT_MESSAGE" value="验证iconPosition的值是否为left或right" />
+    <MESSAGE value="add icon.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="add icon.vue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="651" y="91" width="670" height="645" key="#Notifications" timestamp="1606574010038">
