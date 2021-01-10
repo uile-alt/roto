@@ -1,7 +1,18 @@
 <template>
     <div class="r-button-group"><slot></slot></div>
 </template>
-<script></script>
+<script>
+    export default {
+        mounted() {
+            for(let node of this.$el.children){
+                const name = node.nodeName.toLowerCase()
+                if(name !== 'button'){
+                    console.warn(`r-button-group的子元素应该为button，${name}`)
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .r-button-group{
         display: inline-flex; vertical-align: middle;
