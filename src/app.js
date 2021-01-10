@@ -20,6 +20,8 @@ new Vue({
 })
 
 import chai from 'chai'
+import spies from 'chai-spies'
+chai.use(spies)
 
 const expect = chai.expect;
 //单元测试
@@ -94,9 +96,9 @@ const expect = chai.expect;
         }
     })
     vm.$mount()
-    vm.$on('click', function () {
-        console.log(1)
-    })
+    let spy = chai.spy(function(){})
+    vm.$on('click', spy)
     let button = vm.$el
     button.click()
+    expect(spy).to.have.been.called()
 }
