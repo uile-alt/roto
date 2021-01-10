@@ -9,7 +9,11 @@
     </button>
 </template>
 <script>
+    import Icon from './icon'
     export default {
+        components:{
+            'r-icon': Icon
+        },
         props: {
             icon:{},
             loading: {
@@ -17,7 +21,7 @@
                 default: false
             },
             iconPosition:{
-                type:String,
+                type: String,
                 default:'left',
                 validator(value){
                     return !(value !== 'left' && value !== 'right');
