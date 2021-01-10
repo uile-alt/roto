@@ -7,7 +7,10 @@ Vue.component('r-icon', Icon)
 
 new Vue({
     el: '#app',
-    data: {
-        message: 'hi'
+    data(){
+        return{
+            loading1: false,loading2: false,loading3: false,
+        }
     }
+
 })
