@@ -18,7 +18,9 @@
         display: inline-flex; vertical-align: middle;
         >.r-button{
             border-radius: 0;
-        margin-left: -1px;
+            &:not(:first-child){
+                margin-left: -1px;
+            }
         &:first-child{
             border-top-left-radius: var(--border-radius);
             border-bottom-left-radius: var(--border-radius);
