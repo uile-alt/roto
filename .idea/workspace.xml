@@ -28,6 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -245,14 +246,18 @@
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="2333" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610269083822" />
-    <state x="2012" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610268310541">
+    <state x="2012" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1610460239937">
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
-    <state x="2012" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610268310541" />
+    <state x="2012" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610460239937" />
     <state x="425" y="188" key="EditFileWatcherDialog" timestamp="1606578463500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="188" key="EditFileWatcherDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1606578463500" />
+    <state x="2488" y="230" width="425" height="268" key="MultipleFileMergeDialog" timestamp="1610460283946">
+      <screen x="1920" y="0" width="1366" height="728" />
+    </state>
+    <state x="2488" y="230" width="425" height="268" key="MultipleFileMergeDialog/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610460283946" />
     <state x="569" y="113" key="RollbackChangesDialog" timestamp="1606577096504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -262,11 +267,11 @@
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1606579351114" />
     <state x="2160" y="16" key="SettingsEditor/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610283852115" />
-    <state x="2241" y="128" key="Vcs.Push.Dialog.v2" timestamp="1610116091135">
+    <state x="2241" y="128" key="Vcs.Push.Dialog.v2" timestamp="1610460256749">
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1606577160519" />
-    <state x="2241" y="128" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610116091135" />
+    <state x="2241" y="128" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610460256749" />
     <state x="168" y="120" width="1200" height="584" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606574376702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -275,10 +280,10 @@
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="2305" y="0" width="596" height="728" key="find.popup/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610177212200" />
-    <state x="2298" y="165" key="run.anything.popup" timestamp="1610171713411">
-      <screen x="1920" y="0" width="1366" height="728" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1610460478497">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1606578488145" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1610460478497" />
     <state x="2298" y="165" key="run.anything.popup/0.0.1536.824/1920.0.1366.728@1920.0.1366.728" timestamp="1610171713411" />
     <state x="2303" y="128" width="672" height="600" key="search.everywhere.popup" timestamp="1610294114510">
       <screen x="1920" y="0" width="1366" height="728" />
