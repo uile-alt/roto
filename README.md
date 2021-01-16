@@ -4,10 +4,52 @@
 
 ## 介绍
 
+这是我在学习Vue过程中做的一个UI框架，希望对你有用。
+
 ## 开始使用
 
-1. 安装
+1.CSS样式
 
+    使用本框架前，请在 CSS 中开启 border-box
+    ```
+    *,*::before,*::after{box-sizing: border-box;}
+    ```
+    IE 8 及以上浏览器都支持此样式。
+    
+    你还需要设置默认颜色等变量(后续会改为 SCSS变量)
+    ```
+     html{
+       --button-height: 32px;
+       --font-size: 16px;
+       --button-bg: white;
+       --button-active-bg: #eee;
+       --border-radius: 4px;
+       --border-color: #999;
+       --border-color-hover: #666;
+       --color: #333;
+         }
+    ```
+    IE 15 及以上浏览器都支持此样式。
+
+2.安装 roto
+```
+npm i --save roto-test
+```
+  
+3.引入 roto
+```
+import { Button, ButtonGroup, Icon } from "roto-test";
+import "roto-test/dist/index.css";
+export default {
+  name: "App",
+  components: {
+    "r-button": Button,
+    'r-icon': Icon,
+  },
+};
+```    
+
+  
 ## 文档
 
 ## 提问
