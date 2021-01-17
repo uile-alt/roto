@@ -55,6 +55,8 @@
         <r-input value="hello" readonly></r-input>
         <r-input value="get out"></r-input>
         <r-input @change="inputChange"></r-input>
+        <r-input v-model="message"></r-input>{{message}}
+        <button @click="message+=1">+1</button>
     </div>
    <div class="box">
        <r-input value="河" error="姓名不能少于两个字"></r-input>
