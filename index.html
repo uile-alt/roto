@@ -28,10 +28,30 @@
 
         body {font-size: var(--font-size);}
         .box{margin: 20px;}
+
     </style>
 </head>
 <body>
 <div id="app">
+    <r-row>
+        <r-col span="2">1</r-col>
+        <r-col span="22">2</r-col>
+    </r-row>
+    <r-row>
+        <r-col span="4">1</r-col>
+        <r-col span="10">2</r-col>
+        <r-col span="10">2</r-col>
+    </r-row>
+    <r-row>
+        <r-col span="10">1</r-col>
+        <r-col span="8">2</r-col>
+    </r-row>
+    <r-row>
+        <r-col>1</r-col>
+        <r-col>2</r-col>
+        <r-col>3</r-col>
+    </r-row>
+    <br>
     <div class="box">
         <r-button :loading="loading1" @click="loading1 = !loading1">按钮</r-button>
         <r-button icon="settings" :loading="true">
@@ -61,6 +81,7 @@
    <div class="box">
        <r-input value="河" error="姓名不能少于两个字"></r-input>
    </div>
+
 </div>
 <script src="./src/app.js"></script>
 </body>
