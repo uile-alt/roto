@@ -20,7 +20,7 @@
     name: 'RotoInput',
     props: {
       value: {
-        type: String
+        type: [Number,String]
       },
       disabled: {
         type: Boolean,

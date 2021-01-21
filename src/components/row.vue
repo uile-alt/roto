@@ -14,8 +14,6 @@
       mounted() {
         this.$children.forEach((vm) =>{
           vm.gutter = this.gutter
-          console.log(typeof(this.gutter))
-          console.log(typeof (vm.gutter))
         })
       }
     }
