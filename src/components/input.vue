@@ -34,11 +34,7 @@
         type: String
       }
     },
-    methods:{
-      change(){
 
-      }
-    }
   }
 </script>
 <style lang="scss" scoped>
