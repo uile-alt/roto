@@ -27,7 +27,6 @@
       phone: {type: Object, validator,},
       ipad: {type: Object, validator,},
       narrowPc: {type: Object, validator,},
-      pc: {type: Object, validator,},
       widthPc: {type: Object, validator,},
     },
     data() {
@@ -40,7 +39,7 @@
         return {paddingLeft: this.gutter / 2 + 'px', paddingRight: this.gutter / 2 + 'px'}
       },
       colClass() {
-        let {span, offset, phone, ipad, narrowPc, pc, widthPc} = this
+        let {span, offset, phone, ipad, narrowPc,  widthPc} = this
         let phoneClass = []
         if (phone) {
           phoneClass = []
@@ -49,7 +48,6 @@
           ...(phone && [`col-phone-${phone.span}`]),
           ...(ipad && [`col-ipad-${ipad.span}`]),
           ...(narrowPc && [`col-narrow-pc-${narrowPc.span}`]),
-          ...(pc && [`col-pc-${pc.span}`]),
           ...(widthPc && [`col-width-pc-${widthPc.span}`])
         ]
 
@@ -107,20 +105,6 @@
                 }
             }
             $class: offset-narrow-pc-;
-            @for $n from 1 through 24 {
-                &.#{$class}#{$n} {
-                    margin-left: ($n / 24) * 100%;
-                }
-            }
-        }
-        @media (min-width: 992px) and (max-width: 1200px) {
-            $class: col-pc-;
-            @for $n from 1 through 24 {
-                &.#{$class}#{$n} {
-                    width: ($n / 24) * 100%;
-                }
-            }
-            $class: offset-pc-;
             @for $n from 1 through 24 {
                 &.#{$class}#{$n} {
                     margin-left: ($n / 24) * 100%;
