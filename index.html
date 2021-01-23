@@ -27,30 +27,50 @@
         #app {margin: 20px;}
 
         body {font-size: var(--font-size);}
-        .box{margin: 20px;}
+
+        .box {margin: 20px;}
 
     </style>
 </head>
 <body>
+<style>
+
+</style>
 <div id="app">
-    <div style="border: 1px solid black">
-<!--    <r-row>-->
-<!--        <r-col span="2">1</r-col>-->
-<!--        <r-col span="22" offset="2">2</r-col>-->
-<!--    </r-row>-->
-<!--    <r-row>-->
-<!--        <r-col span="4"></r-col>-->
-<!--        <r-col span="8" offset="2">1</r-col>-->
-<!--        <r-col span="6" offset="4">1</r-col>-->
-<!--    </r-row>-->
-<!--    <r-row>-->
-<!--        <r-col span="10" >1</r-col>-->
-<!--        <r-col span="8" offset="6">1</r-col>-->
-<!--    </r-row>-->
-    <r-row gutter="20">
-        <r-col>1</r-col>
-        <r-col>1</r-col>
-    </r-row>
+
+    <div style="border: 1px solid black; ">
+        <r-row>
+            <r-col span="4">
+                <r-row align="left">
+                    <r-col>a</r-col>
+                    <r-col>b</r-col>
+                    <r-col>c</r-col>
+                </r-row>
+            </r-col>
+            <r-col span="8">
+                <r-row align="center">
+                    <r-col>a</r-col>
+                    <r-col>b</r-col>
+                    <r-col>c</r-col>
+                </r-row>
+            </r-col>
+            <r-col span="12">
+                <r-row align="right">
+                    <r-col>a</r-col>
+                    <r-col>b</r-col>
+                    <r-col>c</r-col>
+                </r-row>
+            </r-col>
+        </r-row>
+        <r-row>
+            <r-col span="4"></r-col>
+            <r-col span="8" offset="2">1</r-col>
+            <r-col span="6" offset="4">1</r-col>
+        </r-row>
+        <r-row>
+            <r-col span="10">1</r-col>
+            <r-col span="8" offset="6">1</r-col>
+        </r-row>
         <r-row gutter="20">
             <r-col>1</r-col>
             <r-col>1</r-col>
@@ -81,12 +101,13 @@
         <r-input value="hello" readonly></r-input>
         <r-input value="get out"></r-input>
         <r-input @change="inputChange"></r-input>
-        <r-input v-model="messages"></r-input>{{messages}}
+        <r-input v-model="messages"></r-input>
+        {{messages}}
         <button @click="messages+=1">+1</button>
     </div>
-   <div class="box">
-       <r-input value="河" error="姓名不能少于两个字"></r-input>
-   </div>
+    <div class="box">
+        <r-input value="河" error="姓名不能少于两个字"></r-input>
+    </div>
 
 </div>
 <script src="./src/app.js"></script>
