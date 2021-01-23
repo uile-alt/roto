@@ -29,7 +29,10 @@
         body {font-size: var(--font-size);}
 
         .box {margin: 20px;}
-
+        .demo{background: #0b97c4;
+            border: 1px solid red;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +41,70 @@
 </style>
 <div id="app">
 
+   <r-row>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+       <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+           <div class="demo">
+               1
+           </div>
+       </r-col>
+   </r-row>
+
+    <div class="box">
+        <r-button :loading="loading1" @click="loading1 = !loading1">按钮</r-button>
+        <r-button icon="settings" :loading="true">
+            按钮
+        </r-button>
+        <r-button icon="settings" icon-position="left" :loading="loading2" @click="loading2 = !loading2">
+            按钮
+        </r-button>
+        <r-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+            按钮
+        </r-button>
+        <r-button-group>
+            <r-button icon="left">上一页</r-button>
+            <r-button>更多</r-button>
+            <r-button icon="right" icon-position="right">下一页</r-button>
+        </r-button-group>
+    </div>
+    <br>
+    <div class="box">
+        <r-input disabled></r-input>
+        <r-input value="hello" readonly></r-input>
+        <r-input value="get out"></r-input>
+        <r-input @change="inputChange"></r-input>
+        <r-input v-model="messages"></r-input>
+        {{messages}}
+        <button @click="messages+=1">+1</button>
+    </div>
+    <div class="box">
+        <r-input value="河" error="姓名不能少于两个字"></r-input>
+    </div>
+    <br>
     <div style="border: 1px solid black; ">
         <r-row>
             <r-col span="4">
@@ -71,48 +138,19 @@
             <r-col span="16" :phone="{span:12}">2</r-col>
             <r-col span="2" offset="6" :phone="{span: 12,offset:0}">2</r-col>
         </r-row>
-        <r-row gutter="20">
-            <r-col span="2" :phone="{span:24}" :ipad="{span:8}" :narrow-pc="{span:4}"
-                   :width-pc="{span:1}">1</r-col>
-            <r-col span="22" :phone="{span:24}" :ipad="{span:16}" :narrow-pc="{span:20}"
-                   :width-pc="{span:23}">2</r-col>
+        <r-row gutter="24">
+            <r-col span="2"  :ipad="{span:8}" :narrow-pc="{span:4}"
+                   :pc="{span:2}"
+                   :wide-pc="{span:1}">1</r-col>
+            <r-col span="24"  :ipad="{span:16}" :narrow-pc="{span:20}"
+                   :pc="{span:22}"
+                   :wide-pc="{span:23}">2</r-col>
         </r-row>
         <r-row gutter="20">
             <r-col>1</r-col>
             <r-col>1</r-col>
             <r-col>1</r-col>
         </r-row>
-    </div>
-    <br>
-    <div class="box">
-        <r-button :loading="loading1" @click="loading1 = !loading1">按钮</r-button>
-        <r-button icon="settings" :loading="true">
-            按钮
-        </r-button>
-        <r-button icon="settings" icon-position="left" :loading="loading2" @click="loading2 = !loading2">
-            按钮
-        </r-button>
-        <r-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-            按钮
-        </r-button>
-        <r-button-group>
-            <r-button icon="left">上一页</r-button>
-            <r-button>更多</r-button>
-            <r-button icon="right" icon-position="right">下一页</r-button>
-        </r-button-group>
-    </div>
-    <br>
-    <div class="box">
-        <r-input disabled></r-input>
-        <r-input value="hello" readonly></r-input>
-        <r-input value="get out"></r-input>
-        <r-input @change="inputChange"></r-input>
-        <r-input v-model="messages"></r-input>
-        {{messages}}
-        <button @click="messages+=1">+1</button>
-    </div>
-    <div class="box">
-        <r-input value="河" error="姓名不能少于两个字"></r-input>
     </div>
 
 </div>
