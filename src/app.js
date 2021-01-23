@@ -19,7 +19,7 @@ new Vue({
   data() {
     return {
       loading1: false, loading2: false, loading3: false,
-      message: 0
+      messages: 0
     }
   },
   methods: {
