@@ -40,11 +40,8 @@
       },
       colClass() {
         let {span, offset, phone, ipad, narrowPc,  widthPc} = this
-        let phoneClass = []
-        if (phone) {
-          phoneClass = []
-        }
-        return [span && `col-${span}`, offset && `offset-${offset}`,
+        return [
+          span && `col-${span}`, offset && `offset-${offset}`,
           ...(phone && [`col-phone-${phone.span}`]),
           ...(ipad && [`col-ipad-${ipad.span}`]),
           ...(narrowPc && [`col-narrow-pc-${narrowPc.span}`]),
