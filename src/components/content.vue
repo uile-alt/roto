@@ -4,8 +4,9 @@
     </div>
 </template>
 <script>
-
-
+    export default {
+      name:'RotoContent'
+    }
 </script>
 <style lang="scss" scoped>
     .content {

@@ -4,11 +4,10 @@
     </div>
 </template>
 <script>
-
+  export default {
+    name:'RotoHeader'
+  }
 
 </script>
 <style lang="scss" scoped>
-    .header{
-
-    }
 </style>

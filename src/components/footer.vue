@@ -4,7 +4,9 @@
     </div>
 </template>
 <script>
-
+  export default {
+    name:'RotoFooter'
+  }
 
 </script>
 <style lang="scss" scoped>
