@@ -10,6 +10,8 @@ import Footer from './components/footer'
 import Sider from './components/sider'
 import Layout from './components/layout'
 import Header from './components/header'
+import Toast from './components/toast'
+import plugin from "./components/plugin";
 
 Vue.component('r-button', Button)
 Vue.component('r-icon', Icon)
@@ -22,6 +24,8 @@ Vue.component('r-footer', Footer)
 Vue.component('r-sider', Sider)
 Vue.component('r-layout', Layout)
 Vue.component('r-header', Header)
+Vue.component('r-toast', Toast)
+Vue.use(plugin)
 
 
 new Vue({
@@ -35,6 +39,9 @@ new Vue({
   methods: {
     inputChange(e) {
       console.log(e.target.value)
+    },
+    showToast(){
+      this.$toast('我是 message')
     }
   }
 })
