@@ -39,26 +39,26 @@ new Vue({
     }
   },
   created(){
-    this.$toast('为打包工具提供代码。',{
-      enableHtml : false,
-      closeButton: {
-        text: '哈哈',
-        callback(){
-          console.log('我触发了')
-        }
-      },
-      autoClose: false,
-      autoCloseDelay: 3,
-      position: 'middle'
 
-    })
   },
   methods: {
     inputChange(e) {
       console.log(e.target.value)
     },
     showToast(){
+      this.$toast('为打包工具提供代码。',{
+        enableHtml : false,
+        closeButton: {
+          text: '哈哈',
+          callback(){
+            console.log('我触发了')
+          }
+        },
+        autoClose: false,
+        autoCloseDelay: 3,
+        position: 'middle'
 
+      })
     }
   }
 })
