@@ -11,7 +11,7 @@ import Sider from './components/sider'
 import Layout from './components/layout'
 import Header from './components/header'
 import Toast from './components/toast'
-import plugin from "./components/plugin";
+import plugin from "./plugin";
 
 Vue.component('r-button', Button)
 Vue.component('r-icon', Icon)
@@ -27,6 +27,8 @@ Vue.component('r-header', Header)
 Vue.component('r-toast', Toast)
 Vue.use(plugin)
 
+import createElement from 'vue'
+const h = createElement
 
 new Vue({
   el: '#app',
@@ -35,10 +37,11 @@ new Vue({
       loading1: false, loading2: false, loading3: false,
       messages: 0
     }
-
   },
   created(){
-    this.$toast('我是 message')
+    this.$toast('为打包工具提供代码。',{
+      enableHtml : true
+    })
   },
   methods: {
     inputChange(e) {
