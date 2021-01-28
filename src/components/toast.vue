@@ -1,5 +1,5 @@
 <template>
-    <div class="toast" ref="wrapper">
+    <div class="toast" ref="wrapper" :class="toastClasses">
         <div class="message">
             <slot v-if="!enableHtml"></slot>
             <div v-else v-html="$slots.default[0]"></div>
@@ -16,50 +16,63 @@
         type: Boolean,
         default: true
       },
-      autoCloseDelay:{
-        type:Number,
+      autoCloseDelay: {
+        type: Number,
         default: 300
       },
       closeButton: {
         type: Object,
-        default(){
-          return{
-            text:'关闭', callback: undefined
+        default() {
+          return {
+            text: '关闭', callback: undefined
           }
         }
       },
-      enableHtml:{
+      enableHtml: {
         type: Boolean,
         default: false
+      },
+      position: {
+        type: String,
+        default: 'top',
+        validator(value) {
+          return ['top', 'bottom', 'middle', 'right'].indexOf(value) >= 0
+        }
       }
     },
     mounted() {
-        this.updateStyles()
-        this.execAutoClose()
+      this.updateStyles()
+      this.execAutoClose()
     },
-    methods:{
-      execAutoClose(){
-        if(this.autoClose){
-          setTimeout(()=>{
+    computed: {
+      toastClasses() {
+        return {
+          [`position-${this.position}`]: true
+        }
+      }
+    },
+    methods: {
+      execAutoClose() {
+        if (this.autoClose) {
+          setTimeout(() => {
             this.close()
-          },this.autoCloseDelay *1000)
+          }, this.autoCloseDelay * 1000)
         }
       },
-      updateStyles(){
-        this.$nextTick(()=>{
+      updateStyles() {
+        this.$nextTick(() => {
           console.log(this.$refs.wrapper.getBoundingClientRect())
           this.$refs.line.style.height = `${this.$refs.wrapper.getBoundingClientRect().height}px`
         })
       },
-      close(){
+      close() {
         this.$el.remove()
         this.$destroy()
       },
-      onClickClose(){
+      onClickClose() {
         this.close()
-        if(this.closeButton && typeof this.closeButton.callback === "function"){
+        if (this.closeButton && typeof this.closeButton.callback === "function") {
           this.closeButton.callback()
-
         }
       }
     }
@@ -70,21 +83,47 @@
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
     .toast {
-        position: fixed;top: 0;left: 50%;transform: translateX(-50%);font-size: $font-size;
-        line-height: 1.8;min-height: $toast-min-height;display: flex;align-items: center;background: $toast-bg;
-        border-radius: 4px;color: white;padding: 0 16px;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+        position: fixed;
+        font-size: $font-size;
+        line-height: 1.8;
+        min-height: $toast-min-height;
+        display: flex;
+        align-items: center;
+        background: $toast-bg;
+        border-radius: 4px;
+        color: white;
+        padding: 0 16px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
+        left: 50%;
 
-        .close{
+        .close {
             padding-left: 16px;
             flex-shrink: 0;
         }
-        .line{
+
+        .line {
             height: 100%;
             border-left: 1px solid #666;
             margin-left: 16px;
         }
-        .message{
+
+        .message {
             padding: 8px 0;
+        }
+
+        &.position-top {
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        &.position-bottom {
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+
+        &.position-middle {
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
     }
 
