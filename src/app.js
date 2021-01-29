@@ -45,7 +45,7 @@ new Vue({
     inputChange(e) {
       console.log(e.target.value)
     },
-    showToast(){
+    showToast(position){
       this.$toast('为打包工具提供代码。',{
         enableHtml : false,
         closeButton: {
@@ -56,10 +56,19 @@ new Vue({
         },
         autoClose: false,
         autoCloseDelay: 3,
-        position: 'middle'
-
+        position
       })
+    },
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
     }
+
   }
 })
 
