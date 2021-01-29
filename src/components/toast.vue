@@ -67,6 +67,7 @@
       },
       close() {
         this.$el.remove()
+        this.$emit('close')
         this.$destroy()
       },
       onClickClose() {
@@ -96,35 +97,16 @@
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
         left: 50%;
 
-        .close {
-            padding-left: 16px;
-            flex-shrink: 0;
-        }
+        .close {padding-left: 16px;flex-shrink: 0;}
 
-        .line {
-            height: 100%;
-            border-left: 1px solid #666;
-            margin-left: 16px;
-        }
+        .line {height: 100%;border-left: 1px solid #666;margin-left: 16px;}
 
-        .message {
-            padding: 8px 0;
-        }
+        .message {padding: 8px 0;}
+        &.position-top {top: 0;transform: translateX(-50%);}
 
-        &.position-top {
-            top: 0;
-            transform: translateX(-50%);
-        }
+        &.position-bottom {bottom: 0;transform: translateX(-50%);}
 
-        &.position-bottom {
-            bottom: 0;
-            transform: translateX(-50%);
-        }
-
-        &.position-middle {
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
+        &.position-middle {top: 50%;transform: translate(-50%,-50%);}
     }
 
 </style>
