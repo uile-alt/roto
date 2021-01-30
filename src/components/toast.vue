@@ -15,12 +15,11 @@
     name: 'RotoToast',
     props: {
       autoClose: {
-        type: Boolean,
-        default: true
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 300
+        type: [Boolean,Number],
+        default: 3,
+        validator(value) {
+          return value === false || typeof value === 'number';
+        }
       },
       closeButton: {
         type: Object,
@@ -58,12 +57,11 @@
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
-          }, this.autoCloseDelay * 1000)
+          }, this.autoClose * 1000)
         }
       },
       updateStyles() {
         this.$nextTick(() => {
-          console.log(this.$refs.hello.getBoundingClientRect())
           this.$refs.line.style.height = `${this.$refs.hello.getBoundingClientRect().height}px`
         })
       },

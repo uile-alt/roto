@@ -54,8 +54,7 @@ new Vue({
             console.log('我触发了')
           }
         },
-        autoClose: false,
-        autoCloseDelay: 3,
+        autoClose: 3,
         position
       })
     },

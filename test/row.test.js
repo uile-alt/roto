@@ -10,7 +10,7 @@ Vue.config.devtools = false
 
 describe('Row', () => {
   it('存在', () => {
-    expect(Row).to.be.exist
+    expect(Row).to.exist
   })
 
   it('接收 gutter 属性', (done) => {

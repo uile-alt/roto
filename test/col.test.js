@@ -8,7 +8,7 @@ Vue.config.devtools = false
 
 describe('Col', () => {
   it('存在', () => {
-    expect(Col).to.be.exist
+    expect(Col).to.exist
   })
 
   it('接收 span 属性', () => {
