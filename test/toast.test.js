@@ -54,7 +54,7 @@ describe('Toast', () => {
       const vm = new Constructor({
         propsData: {enableHtml: true}
       })
-      vm.$slots.default = ['<strong class="hi">hi</strong>>']
+      vm.$slots.default = ['<strong class="hi">hi</strong>']
       vm.$mount()
       let strong = vm.$el.querySelector('.hi')
       expect(strong).to.exist

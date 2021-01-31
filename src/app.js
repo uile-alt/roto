@@ -11,6 +11,11 @@ import Sider from './components/sider'
 import Layout from './components/layout'
 import Header from './components/header'
 import Toast from './components/toast'
+import Tabs from './components/tabs'
+import TabsPane from './components/tabs-pane'
+import TabsItem from './components/tabs-item'
+import TabsHead from './components/tabs-head'
+import TabsBody from './components/tabs-body'
 import plugin from "./plugin";
 
 Vue.component('r-button', Button)
@@ -25,6 +30,11 @@ Vue.component('r-sider', Sider)
 Vue.component('r-layout', Layout)
 Vue.component('r-header', Header)
 Vue.component('r-toast', Toast)
+Vue.component('r-tabs', Tabs)
+Vue.component('r-tabs-pane', TabsPane)
+Vue.component('r-tabs-item', TabsItem)
+Vue.component('r-tabs-head', TabsHead)
+Vue.component('r-tabs-body', TabsBody)
 Vue.use(plugin)
 
 import createElement from 'vue'
@@ -34,6 +44,7 @@ new Vue({
   el: '#app',
   data() {
     return {
+      selectedTab:'sports',
       loading1: false, loading2: false, loading3: false,
       messages: 0
     }
