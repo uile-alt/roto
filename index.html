@@ -40,10 +40,15 @@
 <div id="app">
     <r-tabs :selected.sync="selectedTab">
         <r-tabs-head>
-            <template slot="actions"> <button>设置</button></template>
-          <r-tabs-item name="hot"><r-icon name="settings"></r-icon>热点</r-tabs-item>
-          <r-tabs-item name="finance" disabled>财经</r-tabs-item>
-          <r-tabs-item name="sports">体育</r-tabs-item>
+            <template slot="actions">
+                <button>设置</button>
+            </template>
+            <r-tabs-item name="hot">
+                <r-icon name="settings"></r-icon>
+                热点
+            </r-tabs-item>
+            <r-tabs-item name="finance" disabled>财经</r-tabs-item>
+            <r-tabs-item name="sports">体育</r-tabs-item>
         </r-tabs-head>
         <r-tabs-body>
             <r-tabs-pane name="hot">热点相关</r-tabs-pane>

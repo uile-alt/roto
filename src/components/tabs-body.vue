@@ -5,7 +5,8 @@
 </template>
 <script>
   export default {
-    name: 'RotoTabsBody'
+    name: 'RotoTabsBody',
+    inject: ['eventBus'],
   }
 </script>
 <style scoped lang="scss">

@@ -4,8 +4,14 @@
     </div>
 </template>
 <script>
+  import Vue from 'vue'
   export default {
     name: 'RotoTabs',
+    data(){
+      return{
+        eventBus: new Vue()
+      }
+    },
     props: {
       selected:{
         type: String,
@@ -20,7 +26,14 @@
       }
     },
     created() {
-      this.$emit('update:selected', '')
+    },
+    mounted() {
+      this.eventBus.$emit('update:selected', this.selected)
+    },
+    provide(){
+      return {
+        eventBus: this.eventBus
+      }
     }
   }
 </script>
