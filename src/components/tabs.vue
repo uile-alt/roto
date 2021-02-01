@@ -28,7 +28,15 @@
     created() {
     },
     mounted() {
-      this.eventBus.$emit('update:selected', this.selected)
+      this.$children.forEach((vm)=>{
+        if(vm.$options.name === 'RotoTabsHead'){
+          vm.$children.forEach((childVm)=>{
+            if(childVm.$options.name === 'RotoTabsItem' && childVm.name === this.selected){
+              this.eventBus.$emit('update:selected', this.selected, childVm)
+            }
+          })
+        }
+      })
     },
     provide(){
       return {
