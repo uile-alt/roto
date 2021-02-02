@@ -1,21 +1,14 @@
 const expect = chai.expect;
 import Vue from 'vue'
-import Tabs from '../src/components/tabs'
-import TabsPane from "../src/components/tabs-pane";
 import TabsItem from "../src/components/tabs-item";
-import TabsHead from "../src/components/tabs-head";
-import TabsBody from "../src/components/tabs-body";
-Vue.component('r-tabs', Tabs)
-Vue.component('r-tabs-pane', TabsPane)
 Vue.component('r-tabs-item', TabsItem)
-Vue.component('r-tabs-head', TabsHead)
-Vue.component('r-tabs-body', TabsBody)
-
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
 
+
 describe('TabsItem', () => {
+
   it('存在', () => {
     expect(TabsItem).to.exist
   })
@@ -23,7 +16,8 @@ describe('TabsItem', () => {
     const Constructor = Vue.extend(TabsItem)
     const vm = new Constructor({
       propsData: {
-       disabled: true,
+        disabled: true,
+        name:'1234'
       }
     }).$mount()
     expect(vm.$el.classList.contains('disabled')).to.be.true
@@ -36,10 +30,10 @@ describe('TabsItem', () => {
     const Constructor = Vue.extend(TabsItem)
     const vm = new Constructor({
       propsData: {
-        name: 'xxx',
+        name: 'test',
       }
     }).$mount()
-    expect(vm.$el.getAttribute('data-name')).to.eq('xxx')
+    expect(vm.$el.getAttribute('data-name')).to.eq('test')
     vm.$el.remove()
     vm.$destroy()
   })

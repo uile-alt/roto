@@ -42,7 +42,9 @@ describe('Tabs', () => {
     })
     vm.$nextTick(()=>{
       let x = vm.$el.querySelector('.tabs-item[data-name="hot"]')
+      let y = vm.$el.querySelector('.tabs-pane[name="hot"]')
       expect(x.classList.contains('active')).to.be.true
+      expect(y.classList.contains('active')).to.be.true
       done()
     })
   })
