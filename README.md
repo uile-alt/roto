@@ -1,7 +1,6 @@
 # roto -- 一个Vue UI 组件
 
-[![Build Status](https://travis-ci.com/uile-alt/roto.svg?branch=main)](https://travis-ci.org/uile-alt/roto)
-
+[![Build Status](https://www.travis-ci.com/uile-alt/roto.svg?branch=main)](https://www.travis-ci.com/uile-alt/roto)
 ## 介绍
 
 这是我在学习Vue过程中做的一个UI框架，希望对你有用。
