@@ -1,6 +1,6 @@
 # roto -- 一个Vue UI 组件
 
-[![Build Status](https://travis-ci.org/uile-alt/roto.svg?branch=main)](https://travis-ci.org/uile-alt/roto)
+[![Build Status](https://travis-ci.com/uile-alt/roto.svg?branch=main)](https://travis-ci.org/uile-alt/roto)
 
 ## 介绍
 
