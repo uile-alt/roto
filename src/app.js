@@ -55,6 +55,9 @@ new Vue({
 
   },
   methods: {
+    hi(){
+      console.log('yy');
+    },
     inputChange(e) {
       console.log(e.target.value)
     },

@@ -38,18 +38,21 @@
 
 </style>
 <div id="app" style="padding-top: 100px; padding-left: 100px;border: 1px solid red;">
-    <r-popover>
-        <template slot="content">
-            <div>popover</div>
-        </template>
+    <div style="overflow: hidden; border:1px solid yellow; padding: 5px" @click="hi()">
+        <r-popover>
+            <template slot="content">
+                <div>popover</div>
+            </template>
             <button>点击</button>
-    </r-popover>
-    <r-popover>
-        <template slot="content">
-            <div>popover</div>
-        </template>
+        </r-popover>
+        <r-popover>
+            <template slot="content">
+                <div>popover</div>
+            </template>
             <button>点击</button>
-    </r-popover>
+        </r-popover>
+    </div>
+
 <!--    <r-tabs :selected.sync="selectedTab">-->
 <!--        <r-tabs-head>-->
 <!--            <template slot="actions">-->
