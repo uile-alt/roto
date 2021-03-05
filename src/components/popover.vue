@@ -20,11 +20,34 @@
         validator(value){
           return ['top','bottom','left','right'].indexOf(value) >= 0
         }
+      },
+      trigger:{
+        type: String,
+        default: 'click',
+        validator(value){
+          return ['click','hover'].indexOf(value) >= 0
+        }
       }
     },
     data() {
       return {
         visible: false
+      }
+    },
+    mounted() {
+      if(this.trigger === 'click'){
+        this.$refs.popover.addEventListener('click1',this.onClick)
+      }else {
+        this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
+    },
+    destroyed() {
+      if(this.trigger === 'click'){
+        this.$refs.popover.removeEventListener('click1',this.onClick)
+      }else {
+        this.$refs.popover.removeEventListener('mouseenter',this.open)
+        this.$refs.popover.removeEventListener('mouseleave',this.close)
       }
     },
     methods: {
