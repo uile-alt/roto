@@ -36,7 +36,7 @@
     },
     mounted() {
       if(this.trigger === 'click'){
-        this.$refs.popover.addEventListener('click1',this.onClick)
+        this.$refs.popover.addEventListener('p-click',this.onClick)
       }else {
         this.$refs.popover.addEventListener('mouseenter',this.open)
         this.$refs.popover.addEventListener('mouseleave',this.close)
@@ -44,7 +44,7 @@
     },
     destroyed() {
       if(this.trigger === 'click'){
-        this.$refs.popover.removeEventListener('click1',this.onClick)
+        this.$refs.popover.removeEventListener('p-click',this.onClick)
       }else {
         this.$refs.popover.removeEventListener('mouseenter',this.open)
         this.$refs.popover.removeEventListener('mouseleave',this.close)
@@ -138,10 +138,13 @@
 
             &::before{
                 border-top-color: #000000;
+                border-bottom: none;
                 top:100%;
+
             }
             &::after{
                 border-top-color: white;
+                border-bottom: none;
                 top:calc(100% - 1px);
             }
         }
@@ -155,10 +158,12 @@
             &::before{
                 border-left-color: #000000;
                 left:100%;
+                border-right: none;
             }
             &::after{
                 border-left-color: white;
                 left:calc(100% - 1px);
+                border-right: none;
             }
         }
         &.position-right{
@@ -170,10 +175,12 @@
             &::before{
                 border-right-color: #000000;
                 right:100%;
+                border-left: none;
             }
             &::after{
                 border-right-color: white;
                 right:calc(100% - 1px);
+                border-left: none;
             }
         }
 
@@ -186,10 +193,12 @@
             &::before{
                 border-bottom-color: #000000;
                 bottom:100%;
+                border-top: none;
             }
             &::after{
                 border-bottom-color: white;
                 bottom:calc(100% - 1px);
+                border-top: none;
             }
         }
 
