@@ -31,24 +31,19 @@
       positionContent() {
         const {contentWrapper,triggerWrapper} = this.$refs
         document.body.appendChild(contentWrapper)
-        let {left, width, top, height} = triggerWrapper.getBoundingClientRect()
-        if(this.position === 'top'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + window.scrollY + 'px'
-        }else if(this.position === 'bottom'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          contentWrapper.style.top = top + height + window.scrollY + 'px'
-        }else if(this.position === 'left'){
-          contentWrapper.style.left = left + window.scrollX + 'px'
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + (height - height2)/2 +window.scrollY + 'px'
-        }else if(this.position === 'right'){
-          contentWrapper.style.left = left + width + window.scrollX + 'px'
-          let {height: height2} = contentWrapper.getBoundingClientRect()
-          contentWrapper.style.top = top + (height - height2)/2 +window.scrollY + 'px'
-        }
+        const {height: height2} = contentWrapper.getBoundingClientRect()
+        const {left, width, top, height} = triggerWrapper.getBoundingClientRect()
 
+        let positions = {
+          top:{left: left + window.scrollX, top: top + window.scrollY},
+          bottom:{left: left + window.scrollX , top: top + height + window.scrollY},
+          left:{left: left + window.scrollX, top: top + (height - height2)/2 +window.scrollY},
+          right:{left: left + width + window.scrollX, top: top + (height - height2)/2 +window.scrollY},
+        }
+        contentWrapper.style.left = positions[this.position].left +'px'
+        contentWrapper.style.top = positions[this.position].top +'px'
       },
+
       close(){
         this.visible = false
         document.removeEventListener('click', this.onClickDocument)
