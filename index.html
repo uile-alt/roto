@@ -37,8 +37,10 @@
 <div id="app" >
     <div style="overflow: hidden; padding: 50px">
         <r-popover position="bottom">
-            <template slot="content">
-                <div>popover内容</div>
+            <template slot="content" slot-scope="{close}">
+                <div>popover内容
+                <r-button @click="close">关闭</r-button>
+                </div>
             </template>
             <r-button>点击</r-button>
         </r-popover>
