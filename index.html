@@ -26,70 +26,15 @@
 
         body {font-size: var(--font-size);}
 
-        /*.box {margin: 20px;}*/
-        .demo{background: bisque;
-            border: 1px solid red;
-            min-height: 100px;
-        }
     </style>
 </head>
 <body>
-<div id="app" >
-    <div style="overflow: hidden; padding: 50px">
-        <r-popover position="bottom">
-            <template slot="content" slot-scope="{close}">
-                <div>popover内容
-                <r-button @click="close">关闭</r-button>
-                </div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover>
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover position="left">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover position="right">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <div style="padding-top: 200px">
-        <r-popover position="bottom" trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover position="left" trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-        <r-popover position="right" trigger="hover">
-            <template slot="content">
-                <div>popover内容</div>
-            </template>
-            <r-button>点击</r-button>
-        </r-popover>
-    </div>
-    </div>
-
+<div id="app" style="padding: 100px">
+        <r-collapse >
+            <r-collapse-item title="标题1">内容1</r-collapse-item>
+            <r-collapse-item title="标题2">内容2</r-collapse-item>
+            <r-collapse-item title="标题3">内容3</r-collapse-item>
+        </r-collapse>
 </div>
 <script src="./src/app.js"></script>
 </body>
