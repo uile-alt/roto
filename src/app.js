@@ -43,21 +43,18 @@ Vue.component('r-collapse', Collapse)
 Vue.component('r-collapse-item', CollapseItem)
 Vue.use(plugin)
 
-import createElement from 'vue'
-const h = createElement
 
 new Vue({
   el: '#app',
   data() {
     return {
-      selectedTab:'sports',
+      // selectedTab:'sports',
       loading1: false, loading2: false, loading3: false,
-      messages: 0
+      messages: 0,
+      selectedTab: ['2','1']
     }
   },
-  created(){
 
-  },
   methods: {
     hi(){
       console.log('yy');
@@ -75,7 +72,6 @@ new Vue({
           }
         },
         autoClose: 3,
-        position
       })
     },
     showToast1(){

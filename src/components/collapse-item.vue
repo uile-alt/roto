@@ -11,44 +11,50 @@
 <script>
   export default {
     name: 'RotoCollapseItem',
-    props:{
-      title: String,
-      required: true
+    props: {
+      title: {
+        type: String,
+        required: true
+      },
+      name: {
+        type: String,
+        required: true
+      }
     },
+
     data() {
       return {
         open: false
       }
     },
-    inject:['eventBus'],
+    inject: ['eventBus'],
     mounted() {
-      this.eventBus && this.eventBus.$on('update:select',(vm)=>{
-        if(vm !== this){
-          this.close()
+      this.eventBus && this.eventBus.$on('update:selected', (names) => {
+        console.log(names);
+        if (names.indexOf(this.name) >= 0) {
+          this.open = true
+        } else {
+          this.open = false
         }
       })
     },
-    methods:{
-      toggle(){
-        if(this.open){
-          this.open = false
-        }else{
-          this.open = true
-          this.eventBus && this.eventBus.$emit('update:select',this)
+    methods: {
+      toggle() {
+        if (this.open) {
+          this.eventBus && this.eventBus.$emit('update:removeSelected', this.name)
+        } else {
+          this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
         }
       },
-      close(){
-        this.open = false
-      }
-    }
+    },
   }
 
 </script>
 <style lang="scss" scoped>
     $grey: #ddd;
-    $border-radius:4px;
-    .collapseItem{
-        >.title{
+    $border-radius: 4px;
+    .collapseItem {
+        > .title {
             border: 1px solid $grey;
             margin-top: -1px;
             margin-left: -1px;
@@ -58,19 +64,22 @@
             align-items: center;
             padding: 0 8px;
         }
-        &:first-child{
-            >.title{
+
+        &:first-child {
+            > .title {
                 border-top-left-radius: $border-radius;
                 border-top-right-radius: $border-radius;
             }
         }
-        &:last-child{
-            >.title:last-child{
+
+        &:last-child {
+            > .title:last-child {
                 border-bottom-left-radius: $border-radius;
                 border-bottom-right-radius: $border-radius;
             }
         }
-        >.content{
+
+        > .content {
             padding: 8px;
         }
     }
