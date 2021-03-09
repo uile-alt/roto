@@ -1,11 +1,12 @@
 <template>
     <div class="collapseItem">
         <div class="title" @click="toggle">
+            <r-icon name="right" :class="{ active: isActive }"></r-icon>
             {{title}}
         </div>
-        <div class="content" v-if="open">
-            <slot></slot>
-        </div>
+            <div class="content" v-if="open" >
+                <slot></slot>
+            </div>
     </div>
 </template>
 <script>
@@ -24,17 +25,19 @@
 
     data() {
       return {
-        open: false
+        open: false,
+        isActive: true,
       }
     },
     inject: ['eventBus'],
     mounted() {
       this.eventBus && this.eventBus.$on('update:selected', (names) => {
-        console.log(names);
         if (names.indexOf(this.name) >= 0) {
           this.open = true
+          this.isActive = true
         } else {
           this.open = false
+          this.isActive = false
         }
       })
     },
@@ -46,13 +49,17 @@
           this.eventBus && this.eventBus.$emit('update:addSelected', this.name)
         }
       },
-    },
+    }
+
   }
 
 </script>
 <style lang="scss" scoped>
     $grey: #ddd;
     $border-radius: 4px;
+    .active{
+        transform: rotate(90deg) ;
+    }
     .collapseItem {
         > .title {
             border: 1px solid $grey;
