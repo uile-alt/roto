@@ -1,6 +1,6 @@
 <template>
     <div class="collapseItem">
-        <div class="title" @click="toggle" :name="name">
+        <div class="title" @click="toggle" :data-name="name">
 <!--            <r-icon name="right" :class="{ active: isActive }"></r-icon>-->
             {{title}}
         </div>

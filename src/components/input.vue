@@ -41,7 +41,6 @@
     $height: 32px;
     $border-color: #999;
     $border-color-hover: #666;
-    $border-radius: 4px;
     $font-size: 12px;
     $box-shadow-color: rgb(0, 0, 0, 0.5);
     $red: #F1453D;

@@ -48,10 +48,10 @@ new Vue({
   el: '#app',
   data() {
     return {
-      // selectedTab:'sports',
+      selectedTab:'sports',
       loading1: false, loading2: false, loading3: false,
       messages: 0,
-      selectedTab: ['2','1']
+      selectedArr: ['2','1']
     }
   },
 
@@ -64,11 +64,12 @@ new Vue({
     },
     showToast(position){
       this.$toast('为打包工具提供代码。',{
+        position,
         enableHtml : false,
         closeButton: {
-          text: '哈哈',
+          text: '关闭',
           callback(){
-            console.log('我触发了')
+            console.log('回调')
           }
         },
         autoClose: 3,

@@ -34,6 +34,13 @@
   }
 </script>
 <style lang="scss" scoped>
+    $button-height: 32px;
+    $font-size: 16px;
+    $button-bg: white;
+    $button-active-bg: #eee;
+    $border-radius: 4px;
+    $border-color: #999;
+    $border-color-hover: #666;
     @keyframes spin {
         0% {
             transform: rotate(0deg)
@@ -51,12 +58,12 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        font-size: var(--font-size);
-        height: var(--button-height);
+        font-size: var($font-size);
+        height: var($button-height);
         padding: 0 1em;
-        border-radius: var(--border-radius);
-        border: 1px solid var(--border-color);
-        background: var(--button-bg);
+        border-radius: var($border-radius);
+        border: 1px solid var($border-color);
+        background: var($button-bg);
         vertical-align: middle;
 
         > .icon {
@@ -69,11 +76,11 @@
         }
 
         &:hover {
-            border-color: var(--border-color-hover);
+            border-color: var($border-color-hover);
         }
 
         &:active {
-            background-color: var(--button-active-bg);
+            background-color: var($button-active-bg);
         }
 
         &:focus {

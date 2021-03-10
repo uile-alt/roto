@@ -1,7 +1,7 @@
 <template>
-    <div class="tabs-head">
+    <div class="tabs-head" ref="head">
         <slot></slot>
-        <div class="line" ref="line" v-show="x"></div>
+        <div class="line" ref="line"></div>
         <div class="actions-wrapper">
             <slot name="actions" ></slot>
         </div>
@@ -13,15 +13,14 @@
     inject: ['eventBus'],
     data(){
       return{
-        x:false
       }
     },
     mounted() {
-      this.eventBus.$on('update:selected',(item,vm)=>{
-        this.x = true
-        let {width,left} = vm.$el.getBoundingClientRect()
+      this.eventBus.$on('update:selected', (item, vm) => {
+        let {width, left} = vm.$el.getBoundingClientRect()
+        let headLeft =  this.$refs.head.getBoundingClientRect().x
         this.$refs.line.style.width = `${width}px`
-        this.$refs.line.style.transform = `translateX(${left}px)`
+        this.$refs.line.style.left = `${left - headLeft}px`
       })
     }
   }
