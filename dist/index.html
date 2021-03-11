@@ -2,12 +2,10 @@
 <html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        * {
+    <style>* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -31,9 +29,8 @@
             background: red;
             min-height: 100px;
             border: 1px solid black;
-        }
-    </style>
-</head>
+        }</style>
+<link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
 <div id="app" style="padding: 100px">
     <r-tabs :selected.sync="selectedTab">
@@ -45,9 +42,9 @@
                 <r-icon name="settings"></r-icon>
                 热点
             </r-tabs-item>
-            <r-tabs-item name="finance" >财经</r-tabs-item>
+            <r-tabs-item name="finance">财经</r-tabs-item>
             <r-tabs-item name="sports">体育</r-tabs-item>
-            <r-tabs-item name="ban" disabled>不可点击</r-tabs-item>
+            <r-tabs-item name="ban" disabled="">不可点击</r-tabs-item>
         </r-tabs-head>
         <r-tabs-body>
             <r-tabs-pane name="hot">热点相关</r-tabs-pane>
@@ -80,7 +77,7 @@
     </r-layout>
     <br>
     <r-row>
-        <r-col  span="23" offset='1'  :narrow-pc="{span:12, offset:12}">
+        <r-col span="23" offset="1" :narrow-pc="{span:12, offset:12}">
             <div class="demo">
                 12
             </div>
@@ -88,32 +85,32 @@
     </r-row>
     <br>
     <r-row>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
         </r-col>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
         </r-col>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
         </r-col>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
         </r-col>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
         </r-col>
-        <r-col  span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
+        <r-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}">
             <div class="demo">
                 1
             </div>
@@ -138,8 +135,8 @@
     </div>
     <br>
     <div class="box">
-        <r-input disabled></r-input>
-        <r-input value="hello" readonly></r-input>
+        <r-input disabled=""></r-input>
+        <r-input value="hello" readonly=""></r-input>
         <r-input value="get out"></r-input>
         <r-input @change="inputChange"></r-input>
         <r-input v-model="messages"></r-input>
@@ -184,12 +181,8 @@
             <r-col span="2" offset="6" :phone="{span: 12,offset:0}">2</r-col>
         </r-row>
         <r-row gutter="24">
-            <r-col span="2"  :ipad="{span:8}" :narrow-pc="{span:4}"
-                   :pc="{span:2}"
-                   :wide-pc="{span:1}">1</r-col>
-            <r-col span="24"  :ipad="{span:16}" :narrow-pc="{span:20}"
-                   :pc="{span:22}"
-                   :wide-pc="{span:23}">2</r-col>
+            <r-col span="2" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}">1</r-col>
+            <r-col span="24" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}">2</r-col>
         </r-row>
         <r-row gutter="20">
             <r-col>1</r-col>
@@ -260,6 +253,6 @@
         </r-collapse>
     {{selectedArr}}
 </div>
-<script src="./src/app.js"></script>
+<script src="/app.a6a4d504.js"></script>
 </body>
 </html>

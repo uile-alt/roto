@@ -15,20 +15,8 @@
     ```
     IE 8 及以上浏览器都支持此样式。
     
-    你还需要设置默认颜色等变量(后续会改为 SCSS变量)
-    ```
-     html{
-       --button-height: 32px;
-       --font-size: 16px;
-       --button-bg: white;
-       --button-active-bg: #eee;
-       --border-radius: 4px;
-       --border-color: #999;
-       --border-color-hover: #666;
-       --color: #333;
-         }
-    ```
-    IE 15 及以上浏览器都支持此样式。
+   
+   
 
 2.安装 roto
 ```
